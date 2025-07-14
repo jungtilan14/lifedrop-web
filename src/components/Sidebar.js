@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { 
   Home, 
   UserPlus, 
+  LogIn,
   Droplets, 
   Search, 
   BarChart3, 
@@ -21,6 +22,7 @@ const Sidebar = () => {
 
   const menuItems = [
     { path: '/', label: 'Home', icon: Home },
+    { path: '/login', label: 'Login', icon: LogIn },
     { path: '/registration', label: 'Registration', icon: UserPlus },
     { path: '/blood-request', label: 'Blood Request', icon: Droplets },
     { path: '/donor-search', label: 'Donor Search', icon: Search },

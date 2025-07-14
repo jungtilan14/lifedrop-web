@@ -72,6 +72,9 @@ const Home = () => {
             <Droplets className="inline mr-2" size={20} />
             Request Blood
           </Link>
+          <Link to="/login" className="btn btn-secondary">
+            Login
+          </Link>
         </div>
       </section>
 
