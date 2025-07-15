@@ -7,6 +7,7 @@ import './App.css';
 // Components
 import Sidebar from './components/Sidebar';
 import Home from './components/Home';
+import Login from './components/Login';
 import Registration from './components/Registration';
 import BloodRequest from './components/BloodRequest';
 import DonorSearch from './components/DonorSearch';
@@ -25,6 +26,7 @@ function App() {
         <main className="main-content">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
             <Route path="/registration" element={<Registration />} />
             <Route path="/blood-request" element={<BloodRequest />} />
             <Route path="/donor-search" element={<DonorSearch />} />
