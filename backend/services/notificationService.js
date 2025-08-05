@@ -14,7 +14,9 @@ class NotificationService {
   // Initialize Firebase Admin SDK
   initializeFirebase() {
     try {
-      if (process.env.FIREBASE_PROJECT_ID) {
+      if (process.env.FIREBASE_PROJECT_ID && 
+          process.env.FIREBASE_PRIVATE_KEY && 
+          process.env.FIREBASE_CLIENT_EMAIL) {
         const firebaseConfig = {
           type: 'service_account',
           project_id: process.env.FIREBASE_PROJECT_ID,
@@ -34,9 +36,12 @@ class NotificationService {
         });
 
         console.log('✅ Firebase Admin SDK initialized successfully');
+      } else {
+        console.log('⚠️ Firebase configuration incomplete - push notifications will be disabled');
       }
     } catch (error) {
       console.error('❌ Firebase initialization error:', error);
+      console.log('⚠️ Continuing without Firebase - push notifications will be disabled');
     }
   }
 
